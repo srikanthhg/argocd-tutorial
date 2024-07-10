@@ -58,7 +58,7 @@ spec:
   source:
     repoURL: https://github.com/srikanthhg/hipstershop-helm.git
     targetRevision: HEAD
-    chart: checkoutservice
+    path: checkoutservice
   destination:
     server: https://kubernetes.default.svc
     namespace: default
