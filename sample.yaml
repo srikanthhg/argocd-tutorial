@@ -1,0 +1,59 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sample-app
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  project: default
+  source:
+    repoURL: <repository_url>    # Replace with your Git repository URL
+    targetRevision: HEAD        # Replace with your desired Git branch or commit hash
+    path: <path_to_manifests>   # Replace with the path to your Kubernetes manifests
+    helm:
+      valueFiles:
+        - values.yaml           # Optionally, specify values.yaml file for Helm charts
+  syncPolicy:
+    automated:
+      prune: true               # Automatically prune resources not specified in Git
+      selfHeal: true            # Automatically reconcile drifts in the application state
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app1
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  project: default
+  source:
+    repoURL: <repository_url1>   # Replace with repository URL for app1
+    targetRevision: main         # Replace with desired Git branch or commit hash for app1
+    path: path/to/app1           # Replace with path to manifests for app1
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app2
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  project: default
+  source:
+    repoURL: <repository_url2>   # Replace with repository URL for app2
+    targetRevision: main         # Replace with desired Git branch or commit hash for app2
+    path: path/to/app2           # Replace with path to manifests for app2
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
