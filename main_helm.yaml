@@ -10,17 +10,6 @@ spec:
     repoURL: https://github.com/srikanthhg/hipstershop-helm.git
     targetRevision: HEAD
     path: adservice
-    path:
-    - adservice
-    - cartservice
-    - checkoutservice
-    - currencyservice
-    - emailservice
-    - frontend
-    - paymentservice
-    - productcatalogservice
-    - recommendationservice
-    - shippingservice 
   destination:
     server: https://kubernetes.default.svc
     namespace: default
@@ -66,3 +55,137 @@ spec:
     automated:
       prune: true 
       selfHeal: true 
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hipstershop-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/srikanthhg/hipstershop-helm.git
+    targetRevision: HEAD
+    path: currencyservice
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true 
+      selfHeal: true 
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hipstershop-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/srikanthhg/hipstershop-helm.git
+    targetRevision: HEAD
+    path: emailservice
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true 
+      selfHeal: true 
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hipstershop-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/srikanthhg/hipstershop-helm.git
+    targetRevision: HEAD
+    path: frontned
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true 
+      selfHeal: true 
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hipstershop-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/srikanthhg/hipstershop-helm.git
+    targetRevision: HEAD
+    path: paymentservice
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true 
+      selfHeal: true 
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hipstershop-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/srikanthhg/hipstershop-helm.git
+    targetRevision: HEAD
+    path: productcatalogservice
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true 
+      selfHeal: true 
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hipstershop-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/srikanthhg/hipstershop-helm.git
+    targetRevision: HEAD
+    path: recommendationservice
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true 
+      selfHeal: true 
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hipstershop-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/srikanthhg/hipstershop-helm.git
+    targetRevision: HEAD
+    path: shippingservice
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true 
+      selfHeal: true 
+
