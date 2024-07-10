@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: hipstershop-app
+  name: hipstershop-app01
   namespace: argocd
 spec:
   #goTemplate: true
@@ -38,7 +38,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: hipstershop-app
+  name: hipstershop-app02
   namespace: argocd
 spec:
   generators:
@@ -64,5 +64,5 @@ spec:
         automated:
           prune: true
           selfHeal: true
-          
+
 
