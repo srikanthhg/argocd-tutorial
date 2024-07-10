@@ -22,10 +22,10 @@ spec:
       source:
         repoURL: https://github.com/srikanthhg/hipstershop-helm.git
         targetRevision: HEAD
-        #path: adservice
-        helm:
-          valueFiles:
-            - values.yaml
+        path: adservice
+        # helm:
+        #   valueFiles:
+        #     - values.yaml
       destination:
         server: '{{.url}}'
         namespace: default
@@ -56,10 +56,7 @@ spec:
       source:
         repoURL: https://github.com/srikanthhg/hipstershop-helm.git
         targetRevision: HEAD
-        helm:
-          valueFiles:
-            - values.yaml
-        #path: cartservice
+        path: cartservice
       destination:
         server: '{{.url}}'
         namespace: default
