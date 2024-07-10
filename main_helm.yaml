@@ -12,19 +12,19 @@ spec:
     # helm:
     #   valueFiles:
     #     - values.yaml
-    path: adservice
+    # path: adservice
   # sourceType: Helm
-  # path:
-  # - adservice
-  # - cartservice
-  # - checkoutservice
-  # - currencyservice
-  # - emailservice
-  # - frontend
-  # - paymentservice
-  # - productcatalogservice
-  # - recommendationservice
-  # - shippingservice 
+    path:
+    - adservice
+    - cartservice
+    - checkoutservice
+    - currencyservice
+    - emailservice
+    - frontend
+    - paymentservice
+    - productcatalogservice
+    - recommendationservice
+    - shippingservice 
   destination:
     server: https://kubernetes.default.svc
     namespace: default
