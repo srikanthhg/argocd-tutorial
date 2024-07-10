@@ -104,7 +104,7 @@ spec:
   source:
     repoURL: https://github.com/srikanthhg/hipstershop-helm.git
     targetRevision: HEAD
-    path: frontend
+    chart: frontend
   destination:
     server: https://kubernetes.default.svc
     namespace: default
