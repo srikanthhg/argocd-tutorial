@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hipstershop-app
+  name: hipstershop-app01
   namespace: argocd
 spec:
   project: default
@@ -21,7 +21,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hipstershop-app
+  name: hipstershop-app02
   namespace: argocd
 spec:
   project: default
@@ -40,7 +40,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hipstershop-app
+  name: hipstershop-app03
   namespace: argocd
 spec:
   project: default
@@ -59,7 +59,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hipstershop-app
+  name: hipstershop-app04
   namespace: argocd
 spec:
   project: default
@@ -78,7 +78,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hipstershop-app
+  name: hipstershop-app05
   namespace: argocd
 spec:
   project: default
@@ -97,7 +97,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hipstershop-app
+  name: hipstershop-app06
   namespace: argocd
 spec:
   project: default
@@ -116,7 +116,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hipstershop-app
+  name: hipstershop-app07
   namespace: argocd
 spec:
   project: default
@@ -135,7 +135,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hipstershop-app
+  name: hipstershop-app08
   namespace: argocd
 spec:
   project: default
@@ -154,7 +154,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hipstershop-app
+  name: hipstershop-app09
   namespace: argocd
 spec:
   project: default
@@ -173,7 +173,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hipstershop-app
+  name: hipstershop-app10
   namespace: argocd
 spec:
   project: default
