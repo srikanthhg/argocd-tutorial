@@ -23,9 +23,9 @@ spec:
         repoURL: https://github.com/srikanthhg/hipstershop-helm.git
         targetRevision: main
         path: adservice
-        # helm:
-        #   valueFiles:
-        #     - values.yaml
+        helm:
+          valueFiles:
+            - values-dev.yaml
       destination:
         server: '{{url}}'
         namespace: default
@@ -37,7 +37,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: hipstershop-app01
+  name: hipstershop-app02
   namespace: argocd
 spec:
   generators:
