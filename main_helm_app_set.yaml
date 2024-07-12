@@ -49,7 +49,7 @@ spec:
       #  url: https://BAF79529C39D42F39216BA239D78AF20.gr7.us-east-1.eks.amazonaws.com
   template:
     metadata:
-      name: '{{cluster}}-app'
+      name: '{{cluster}}-app-1'
     spec:
       project: default
       source:
