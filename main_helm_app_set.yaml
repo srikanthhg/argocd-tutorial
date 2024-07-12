@@ -67,5 +67,301 @@ spec:
           prune: true
           selfHeal: true
 ---
-
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: hipstershop-app02
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: mycluster
+        url: https://kubernetes.default.svc
+      - cluster: mycluster01
+        url: https://FC37BC151128777105301F84A805575A.gr7.us-east-1.eks.amazonaws.com
+  template:
+    metadata:
+      name: '{{cluster}}-app-2' # this should be unique while configuring multiple applications
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/srikanthhg/hipstershop-helm.git
+        targetRevision: main
+        path: checkoutservice
+        helm:
+          valueFiles:
+            - values.yaml
+      destination:
+        server: '{{url}}'
+        namespace: default
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: hipstershop-app02
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: mycluster
+        url: https://kubernetes.default.svc
+      - cluster: mycluster01
+        url: https://FC37BC151128777105301F84A805575A.gr7.us-east-1.eks.amazonaws.com
+  template:
+    metadata:
+      name: '{{cluster}}-app-3' # this should be unique while configuring multiple applications
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/srikanthhg/hipstershop-helm.git
+        targetRevision: main
+        path: currencyservice
+        helm:
+          valueFiles:
+            - values.yaml
+      destination:
+        server: '{{url}}'
+        namespace: default
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: hipstershop-app02
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: mycluster
+        url: https://kubernetes.default.svc
+      - cluster: mycluster01
+        url: https://FC37BC151128777105301F84A805575A.gr7.us-east-1.eks.amazonaws.com
+  template:
+    metadata:
+      name: '{{cluster}}-app-4' # this should be unique while configuring multiple applications
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/srikanthhg/hipstershop-helm.git
+        targetRevision: main
+        path: emailservice
+        helm:
+          valueFiles:
+            - values.yaml
+      destination:
+        server: '{{url}}'
+        namespace: default
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: hipstershop-app02
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: mycluster
+        url: https://kubernetes.default.svc
+      - cluster: mycluster01
+        url: https://FC37BC151128777105301F84A805575A.gr7.us-east-1.eks.amazonaws.com
+  template:
+    metadata:
+      name: '{{cluster}}-app-5' # this should be unique while configuring multiple applications
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/srikanthhg/hipstershop-helm.git
+        targetRevision: main
+        path: frontend
+        helm:
+          valueFiles:
+            - values.yaml
+      destination:
+        server: '{{url}}'
+        namespace: default
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: hipstershop-app02
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: mycluster
+        url: https://kubernetes.default.svc
+      - cluster: mycluster01
+        url: https://FC37BC151128777105301F84A805575A.gr7.us-east-1.eks.amazonaws.com
+  template:
+    metadata:
+      name: '{{cluster}}-app-6' # this should be unique while configuring multiple applications
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/srikanthhg/hipstershop-helm.git
+        targetRevision: main
+        path: paymentservice
+        helm:
+          valueFiles:
+            - values.yaml
+      destination:
+        server: '{{url}}'
+        namespace: default
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: hipstershop-app02
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: mycluster
+        url: https://kubernetes.default.svc
+      - cluster: mycluster01
+        url: https://FC37BC151128777105301F84A805575A.gr7.us-east-1.eks.amazonaws.com
+  template:
+    metadata:
+      name: '{{cluster}}-app-7' # this should be unique while configuring multiple applications
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/srikanthhg/hipstershop-helm.git
+        targetRevision: main
+        path: productcatalogservice
+        helm:
+          valueFiles:
+            - values.yaml
+      destination:
+        server: '{{url}}'
+        namespace: default
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: hipstershop-app02
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: mycluster
+        url: https://kubernetes.default.svc
+      - cluster: mycluster01
+        url: https://FC37BC151128777105301F84A805575A.gr7.us-east-1.eks.amazonaws.com
+  template:
+    metadata:
+      name: '{{cluster}}-app-8' # this should be unique while configuring multiple applications
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/srikanthhg/hipstershop-helm.git
+        targetRevision: main
+        path: recommendationservice
+        helm:
+          valueFiles:
+            - values.yaml
+      destination:
+        server: '{{url}}'
+        namespace: default
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: hipstershop-app02
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: mycluster
+        url: https://kubernetes.default.svc
+      - cluster: mycluster01
+        url: https://FC37BC151128777105301F84A805575A.gr7.us-east-1.eks.amazonaws.com
+  template:
+    metadata:
+      name: '{{cluster}}-app-9' # this should be unique while configuring multiple applications
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/srikanthhg/hipstershop-helm.git
+        targetRevision: main
+        path: shippingservice
+        helm:
+          valueFiles:
+            - values.yaml
+      destination:
+        server: '{{url}}'
+        namespace: default
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: hipstershop-app02
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: mycluster
+        url: https://kubernetes.default.svc
+      - cluster: mycluster01
+        url: https://FC37BC151128777105301F84A805575A.gr7.us-east-1.eks.amazonaws.com
+  template:
+    metadata:
+      name: '{{cluster}}-app-10' # this should be unique while configuring multiple applications
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/srikanthhg/hipstershop-helm.git
+        targetRevision: main
+        path: redis
+        helm:
+          valueFiles:
+            - values.yaml
+      destination:
+        server: '{{url}}'
+        namespace: default
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+---
 
