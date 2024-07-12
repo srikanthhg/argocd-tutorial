@@ -9,7 +9,10 @@ spec:
   source:
     repoURL: https://github.com/srikanthhg/hipstershop-helm.git
     targetRevision: HEAD
-    path: adservice
+    chart: adservice
+    helm:
+      valueFiles:
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: default
