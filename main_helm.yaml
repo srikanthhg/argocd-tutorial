@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/srikanthhg/hipstershop-helm.git
     targetRevision: HEAD
-    chart: adservice
+    path: adservice
     helm:
       valueFiles:
         - values.yaml
