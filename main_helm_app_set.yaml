@@ -49,16 +49,16 @@ spec:
       #  url: https://BAF79529C39D42F39216BA239D78AF20.gr7.us-east-1.eks.amazonaws.com
   template:
     metadata:
-      name: '{{cluster}}-app-1'
+      name: '{{cluster}}-app-1' # this should be unique while configuring multiple applications
     spec:
       project: default
       source:
         repoURL: https://github.com/srikanthhg/hipstershop-helm.git
         targetRevision: main
         path: cartservice
-        # helm:
-        #   valueFiles:
-        #     - values.yaml
+        helm:
+          valueFiles:
+            - values.yaml
       destination:
         server: '{{url}}'
         namespace: default
