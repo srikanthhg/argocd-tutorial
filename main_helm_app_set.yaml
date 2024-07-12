@@ -70,7 +70,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: hipstershop-app02
+  name: hipstershop-app03
   namespace: argocd
 spec:
   generators:
@@ -103,7 +103,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: hipstershop-app02
+  name: hipstershop-app04
   namespace: argocd
 spec:
   generators:
@@ -136,7 +136,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: hipstershop-app02
+  name: hipstershop-app05
   namespace: argocd
 spec:
   generators:
@@ -169,7 +169,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: hipstershop-app02
+  name: hipstershop-app06
   namespace: argocd
 spec:
   generators:
@@ -202,7 +202,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: hipstershop-app02
+  name: hipstershop-app07
   namespace: argocd
 spec:
   generators:
@@ -235,7 +235,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: hipstershop-app02
+  name: hipstershop-app08
   namespace: argocd
 spec:
   generators:
@@ -268,7 +268,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: hipstershop-app02
+  name: hipstershop-app09
   namespace: argocd
 spec:
   generators:
@@ -301,7 +301,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: hipstershop-app02
+  name: hipstershop-app10
   namespace: argocd
 spec:
   generators:
@@ -334,7 +334,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: hipstershop-app02
+  name: hipstershop-app11
   namespace: argocd
 spec:
   generators:
