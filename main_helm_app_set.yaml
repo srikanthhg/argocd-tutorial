@@ -12,8 +12,8 @@ spec:
       elements:
       - cluster: mycluster
         url: https://kubernetes.default.svc
-      #- cluster: mycluster01
-      #  url: https://BAF79529C39D42F39216BA239D78AF20.gr7.us-east-1.eks.amazonaws.com
+      - cluster: mycluster01
+        url: https://FC37BC151128777105301F84A805575A.gr7.us-east-1.eks.amazonaws.com
   template:
     metadata:
       name: '{{cluster}}-app'
@@ -45,8 +45,8 @@ spec:
       elements:
       - cluster: mycluster
         url: https://kubernetes.default.svc
-      #- cluster: mycluster01
-      #  url: https://BAF79529C39D42F39216BA239D78AF20.gr7.us-east-1.eks.amazonaws.com
+      - cluster: mycluster01
+        url: https://FC37BC151128777105301F84A805575A.gr7.us-east-1.eks.amazonaws.com
   template:
     metadata:
       name: '{{cluster}}-app-1' # this should be unique while configuring multiple applications
